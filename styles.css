@@ -1,0 +1,2000 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+  margin:0 ;
+  font-family: Comfortaa;
+  background-color: white;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: Croogla4F;
+    src: url(assets/Croogla4F.ttf);
+}
+
+
+  .button{
+    font-family: Lato;
+    font-weight: 400;
+    color:#283653;
+    background: white;
+    padding: 10px 20px; 
+    border-radius: 100px;/*for givving rounded edge  */ 
+    text-decoration: none;/*removing line under word */ 
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease; 
+    margin-left: 40px;
+  }
+.button:hover {
+    background-color: #CEAB65;
+    color: white;
+}
+h1 {
+  font-family: Croogla4F;
+  font-size: 60px;
+  margin: 0;
+}
+
+
+h2 {
+    font-family: Croogla4F;
+    font-weight: 400;
+    margin-bottom: 70px;
+    font-size: 30px;
+   color:white;
+  text-align: left;
+  }
+
+
+h3{
+    font-family: Croogla4F;
+    font-weight: 400;
+    font-size: 70px;
+   color:#283653;
+  }
+
+h4{
+  font-family: Croogla4F;
+  font-weight: 400;
+  font-size: 30px;
+ color:#283653;
+  margin:0;
+}
+
+
+p{
+    color:#999;
+    font-size: 30px;
+    line-height: 1.7;
+  text-align: left;
+  }
+/* ------------------------------------------------------------------------*/
+header {
+    background-color: #f0f0f0;
+      padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Croogla4F;
+    height: 80px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 5px #555;
+    color: #283653;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+     box-sizing: border-box;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    line-height: 80px;
+
+    float: left;
+}
+
+.logo .logo-img {
+    height: 80px;
+    margin-right: 5px;
+  margin-top: 30px;
+}
+
+.logo-text {
+    font-family: Croogla4F;
+    color: #283653;
+    float: left;
+    font-size: 50px;
+    line-height: 80px;
+    padding-left: 10px;
+}
+
+.logo-text a{
+   text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+.logo-text a:hover {
+    color: #283653; /* Change color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+li a {
+    line-height: 80px;
+    padding: 0 20px;
+    cursor: pointer;
+    color: #283653;
+    transition: .3s;
+    margin-right: 20px;
+}
+
+li a:hover {
+    color: #CEAB65;
+}
+
+a {
+    text-decoration: none;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    font-size: 24px;
+    color: #283653;
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    margin-top: 20px; /* Adjust as needed */
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: white;
+    border-radius: 0 0 10px 10px; /* Applies rounded corners only to the bottom */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+    z-index: 1000;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.dropdown-menu li {
+    padding: 8px 0;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    display: block;
+    text-align: center; /* Center align text */
+}
+
+/* Media query for medium screens */
+@media (max-width: 1300px) {
+    .navbar ul {
+        display: none;
+        justify-content:space-evenly;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        right: 0;
+        top: 60px;
+    }
+
+    .dropdown-menu ul {
+        padding: 0;
+        justify-content:space-evenly;
+
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 800px) {
+    /* Adjusting header margins and padding */
+
+
+    .logo {
+        display: flex;
+
+        height: 75px;
+        line-height: 80px;
+
+
+
+    }
+
+    .logo .logo-img {
+        height: 80px;
+        margin-right: 0px;
+      margin-top: 30px;
+
+    }
+
+    .logo-text {
+        font-family: Croogla4F;
+        color: #283653;
+
+        font-size: 50px;
+        line-height: 80px;
+        padding-left: 0px;
+        padding:0;
+        margin:0;
+    }
+
+    .dropdown-menu ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px; /* Adjust the gap to a very small value */
+        padding: 0 10px; /* Optional: Adjust padding to your preference */
+        justify-content: space-evenly;
+    }
+}
+
+
+/* Media query for small screens */
+@media (max-width: 480px) {
+    /* Adjusting dropdown menu to show one item per line */
+    .dropdown-menu ul {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 5px; /* Adjust the gap to your preference */
+        padding: 0 10px; /* Optional: Adjust padding as needed */
+        justify-content: start; /* Align items to the start of the container */
+    }
+
+    /* Optional: Adjust list items to ensure proper spacing and alignment */
+    .dropdown-menu ul li {
+        margin: 0; /* Remove any default margin if necessary */
+        padding: 10px; /* Add padding for better touch target */
+        text-align: center; /* Center text if needed */
+    }
+}
+
+
+/* Media query for smaller screens like iPhones */
+@media (max-width: 480px) {
+    .logo .logo-img {
+        height: 50px; /* Reduce height of logo image */
+        margin-right: 3px; /* Adjust margin if needed */
+        margin-top: 30px; /* Adjust margin if needed */
+    }
+
+    .logo-text {
+        font-size: 40px; /* Reduce font size for text */
+        line-height: 50px; /* Adjust line height for better spacing */
+        padding-left: 5px; /* Adjust padding if needed */
+      margin-top: 5px; /* Adjust margin if needed */
+
+    }
+}
+
+
+/* ------------------------------------------------------------------------*/
+   /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   page 1 index css xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+.hero-sectionvc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #273753; /* Adjust the color to match your background */
+    padding: 50px;
+    min-height: 400px;
+}
+
+.text-contentvc {
+    color: white;
+    flex: 1;
+    max-width: 50%;
+    padding: 0 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+.text-contentvc h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.text-contentvc p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-buttonvc {
+    background-color: white;
+    color: #273753; /* Adjust to match your background */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.t3t3 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px; /* Adjust margin as needed */
+  object-fit:cover;
+  object-position:center;
+    position: relative;
+}
+
+.t3t3 img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+    border-top-left-radius: 180px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    object-position:center;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .hero-sectionvc {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .text-contentvc,
+    .t3t3 {
+        max-width: 100%;
+    }
+
+    .t3t3 {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+
+@media (min-width:2200px){
+  .t3t3 img {
+     height:600px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.boxt {
+   width:100%;
+    height: 900px;
+  object-fit:cover;
+  object-position:center;
+    position: relative;
+    z-index: 1; /* Ensure parallelograms are above other content */
+    flex: 0 1 auto; /* Allow flexible resizing */
+    overflow: hidden; /* Ensure content doesn't overflow */
+  margin-top: 50px; /* Adjust to overlap the section below */
+  background:url(box.jpg); 
+
+
+
+  border-top-left-radius: 180px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+   margin-bottom: 80px;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+
+.flex-item{
+flex-basis: 100%;
+
+}
+
+
+.overlap-section {
+  display: flex;
+  position: relative; /* Ensure z-index works */
+  z-index: 2; /* Default z-index */
+  background-color: Transparent; 
+  margin-top: -800px; /* Adjust overlap distance */
+padding-right: 0px;
+margin-right: 0px;
+}
+
+.overlap-container{
+display: flex;
+padding-right: 0px;
+margin-right: 0px;
+
+
+
+}
+
+.overlap-container h2{
+  margin-top:100px;
+  font-size: clamp(3rem, 10vw, 6rem); /* Adjusts font size based on viewport width */
+  padding-left: 40px;
+  margin-bottom: 0;
+ 
+}
+
+
+p {
+  -webkit-touch-callout: none; /* Disables the callout that appears when you touch a link */
+  -webkit-user-select: text; /* Allows text selection but prevents the link styling */
+}
+
+a {
+  color: inherit; /* Ensures that the link inherits the color from its parent element */
+  text-decoration: none; /* Removes underline */
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) { /* Adjust the max-width value as needed */
+    .overlap-container h2 {
+        margin-top: 260px; /* Increases margin-top for smaller screens */
+    }
+}
+
+
+.overlap-container p{
+
+  font-size: clamp(1.5rem, 5vw, 2rem); /* Adjusts font size based on viewport width */
+  padding-left: 40px;
+   margin-bottom: 20px;
+  color: #dee9fb;
+}
+
+main{
+  height:90vh; 
+background: linear-gradient(45deg, #2b3a59 10%, #2a3444);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.boxt {
+   width:100%;
+    height: 900px;
+  object-fit:cover;
+  object-position:center;
+    position: relative;
+    z-index: 1; /* Ensure parallelograms are above other content */
+    flex: 0 1 auto; /* Allow flexible resizing */
+    overflow: hidden; /* Ensure content doesn't overflow */
+  margin-top: 50px; /* Adjust to overlap the section below */
+  background:url(box.jpg); 
+
+
+
+  border-top-left-radius: 180px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+   margin-bottom: 80px;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.service-sectionvc {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.dots {
+  font-size: 100px;
+  color: #273753;
+  display: block;
+ margin-top:10px;
+  padding-top:0;
+}
+
+.service-sectionvc h2 {
+  font-size: 2rem;
+  color: #273753;
+  margin: 0;
+  text-align:center;
+}
+
+.service-cardsvc {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cardvc {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s;
+ height:200px;
+
+display: flex;
+flex-wrap: wrap; /* Allow items to wrap onto new lines */
+justify-content: center; /* Center items horizontally */
+align-items: center; /* Center items vertically */
+gap:30px;
+padding:20px;
+
+}
+
+.cardvc img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cardvc h3 {
+  font-size: 1.2rem;
+  color: #273753;
+  margin: 10px 0;
+}
+
+.cardvc p {
+  font-size: 0.9rem;
+  color: #6d6d6d;
+  margin: 0;
+}
+
+.cardvc:hover {
+  transform: translateY(-10px);
+}
+
+
+
+/* ------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------*/
+
+
+
+.flex-container2 {
+  display: flex;
+  width: 100%;
+   align-items: center;
+}
+
+.flex-item2 {
+  flex: 1; /* Ensures equal width for both items */
+  padding: 3%;
+}
+
+
+
+.text-contentvc {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-item2 h3 {
+  font-size: clamp(45px, 4vw + 10px, 70px); /* Adjust values as needed */
+    color: #273753;
+    margin-bottom: 20px;
+   margin-top:70px;
+   padding:30px;
+}
+
+.flex-item2  p {
+  font-size: clamp(20px, 2vw, 35px); /* Adjust values as needed */
+  color: #6d6d6d;
+  margin-bottom: 20px;
+  padding:30px;
+}
+
+.flex-item2 hr {
+    background: #273753;
+    height: 4px; /* Adjust thickness as needed */
+    border: none; /* Remove default border */
+   margin:20px;
+}
+
+.flex-item2 .button{
+  background: #273753;
+  color:white;
+}
+
+.flex-item2 .button:hover {
+    background: #CEAB65; /* Background color on hover */
+    color: white;        /* Text color on hover */
+}
+
+.immerse img {
+    width: 100%; /* Ensures the image stretches to fill the container's width */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 500px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    border-top-left-radius: 20px; /* Rounded top left corner */
+    border-bottom-right-radius: 20px; /* Rounded bottom right corner */
+    display: block; /* Ensures the image behaves like a block-level element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .flex-container2 {
+        flex-direction: column;
+        align-items: center; /* Centers items horizontally */
+        justify-content: center; /* Centers items vertically */
+    }
+
+    .flex-item2 {
+        flex: none; /* Ensures each item takes full width */
+        width: 100%; /* Takes full width of container */
+        padding: 10px 0; /* Adjust padding for spacing */
+        text-align: center; /* Centers text inside the flex item */
+    }
+
+    .immerse img {
+        width: auto; /* Allows width to adjust based on height */
+      height: clamp(30vh, 50%, 50vh); /* Responsive height with min, preferred, and max values */
+        max-height: 50vh; /* Ensures the height doesn't exceed 50% of viewport height */
+        object-fit: cover; /* Ensures the image covers the container without stretching */
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+}
+
+
+
+
+
+
+
+
+
+.services1{
+  height:380px;
+margin-top:-500px;
+  text-align:center;
+}
+
+
+
+.services-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 0;
+
+
+
+}
+
+.boxee1 {
+    background-color: white;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+  height:250px;
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+  margin-bottom: 0;
+  padding-top:40px;
+}
+.services1 p{
+  font-size:20px;
+}
+
+
+
+
+
+.box-imagee1{
+    width:150px;
+  height:100px;
+  background: url('assets/mp.png') center/cover; 
+  transition: background-color 3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: flex;
+  margin-left:44px;
+
+}
+.boxee1:hover .box-imagee1 {
+background: url('assets/mpp.png') center/cover; 
+}
+
+
+
+
+
+
+.box-imagee2{
+  width:150px;
+height:100px;
+  margin-left:42px;
+background: url('assets/mr.png') center/cover; 
+transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.boxee1:hover .box-imagee2 {
+background: url('assets/mrr.png') center/cover; 
+}
+
+
+
+.box-imagee3{
+  width:150px;
+height:100px;
+  margin-left:44px;
+background: url('assets/mw.png') center/cover; 
+transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.boxee1:hover .box-imagee3 {
+background: url('assets/mww.png') center/cover; 
+}
+
+
+
+.box-imagee4{
+  width:150px;
+height:100px;
+  margin-left:44px;
+background: url('assets/mf.png') center/cover; 
+transition: background-color 0.3s ease; 
+}
+
+.boxee1:hover .box-imagee4 {
+background: url('assets/mff.png') center/cover; 
+}
+
+
+.boxee {
+    background-color: white;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+  height:250px;
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+  margin-bottom: 0;
+  padding-top:40px;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */
+.scroll{
+  height:30px;
+  background: white;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+.help-sectionvc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+
+
+.text-contentvc {
+    flex: 1;
+    max-width: 45%;
+    padding: 20px;
+    text-align: left;
+}
+
+.text-contentvc h2 {
+    font-size: 2rem;
+    color: #273753;
+    margin-bottom: 20px;
+   margin-top:70px;
+}
+
+.text-contentvc p {
+    font-size: 1rem;
+    color: #6d6d6d;
+    margin-bottom: 20px;
+}
+
+.cta-buttonvc {
+    background-color: #273753;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-buttonvc:hover {
+    background-color: #1e2c3d;
+}
+
+@media (max-width: 768px) {
+    .help-sectionvc {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-contentvc, .text-contentvc {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .text-contentvc p {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+
+.container {
+    text-align: center;
+    color: red;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  padding-bottom: 50px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 20px 20px; /* Adjusted padding to accommodate larger icon circle */
+    width: 33%; /* Adjusted width for four cards */
+    min-width: 200px; /* Ensures cards are not too small */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    color: #333;
+    flex: 1;
+    margin: 10px; /* Adds margin between cards */
+    box-sizing: border-box; /* Ensures padding and border are included in width and height */
+  transition: transform 0.5s ease-in-out; /* Slower transition for transform */
+
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+    position: absolute;
+    top: -35px; /* Adjusted to center */
+
+    left: 50%;
+    transform: translateX(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box shadow for the circle */
+
+}
+.four h2{
+  color:#CEAB65;
+  padding-bottom: 0px;
+  font-family: Croogla4F;
+  padding-top: 50px;
+  font-size: 60px;
+}
+.iconn {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the circle */
+}
+.card:hover {
+    transform: translateY(-20px); /* Move card higher on hover */
+
+}
+.four .card:hover h3 {
+    color: #CEAB65; /* Change color to yellow on hover */
+}
+
+.four{
+  background: url(assets/bac.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+
+
+.four h3{
+  font-size: 34px;
+  padding-top:20px;
+}
+
+.four p{
+  font-size: 20px;
+  text-align: center;
+}
+.four h2{
+   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+
+
+
+
+
+
+
+.fodo {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  background-color: white;  
+ z-index: 5;
+   background: transparent;
+}
+
+.hessa{
+  background-image: url('assets/ty.png');
+  background-size: cover;
+  background-position: center;
+min-height:400px;
+margin-top:-400px;
+  z-index: 3;
+}
+
+.ph{
+  height:30px;
+   width:30px;
+  padding-right: 20px;
+  padding-left:30px;
+}
+
+.contact-section5 {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+}
+
+.form-container5 {
+  flex: 60%;
+  padding: 40px;
+}
+
+.contact-info5 {
+  flex: 40%;
+   background-image: url('assets/casa.png');
+    background-size: cover;
+    background-position: center;
+  min-height:200px;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+ 
+}
+
+.contact-info5 p {
+  display: flex;
+  align-items: left;
+  margin: 10px 0;
+  color:white;
+  font-size:22px;
+  text-align: left; /* Aligns text to the left */
+
+ 
+}
+
+.contact-info5 .icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+form5 h2 {
+  margin-top: 0;
+}
+
+.form-row5 {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row5 input,
+.form-row5 select {
+  width: 100%;
+}
+
+form input, form select, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #2c3956;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.face{
+  
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: normal; /* Normal font weight */
+
+}
+
+/* Hover state */
+.face:hover {
+  color: #CEAB65; /* Change text color */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+form button:hover {
+  background-color: #3e5279;
+}
+
+@media (max-width: 768px) {
+  .contact-section5 {
+      flex-direction: column;
+  }
+
+  .contact-info5 {
+padding-left:0px;
+    text-align: left;
+     justify-content: left;
+  }
+
+  .contact-info5 p {
+      margin: 5px 0;
+  }
+
+  .form-row5 {
+      flex-direction: column;
+  }
+
+.hessa{
+  height:400px;
+  margin-top:-700 px;
+}
+  .fodo{
+    height:1100px;
+  }
+
+
+}
+
+
+.form-container5 h2{
+  margin:0;
+  color:#2c3956 ;
+}
+
+
+
+
+
+.fodo{
+  position: relative;
+  overflow: hidden;
+  opacity: 0; /* Start with hidden container */
+  transform: translateY(20px); /* Start with container positioned slightly below */
+transition: opacity 2s ease 1s, transform 2s ease 1s;
+}
+
+.fodo.in-view {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Slide up to original position */
+}
+
+
+.contact-info5 a:hover {
+    color: #CEAB65;
+    text-decoration: underline;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+footer{
+  color: white;
+  background: #2c3956;
+  text-align: left;
+  font-size:24px;
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.6);
+  background-image: url('assets/cx.png');
+ padding-top: 30px;
+
+
+    }
+
+
+.footer-top{
+ padding: 0;
+  margin:0;
+  line-height: 100px;
+
+  background-size: cover;
+  background-position: center;
+
+}
+
+footer h3{
+  font-size: 22px;
+  margin-bottom: 22px;
+  color:white;
+
+}
+
+footer hr{
+  border-color: white;
+}
+
+
+.footer-bottom{
+  height: 60px;
+  background:#28334d;
+  line-height: 60px;
+  text-align: center;
+ font-size:15px;
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 400px) { /* Adjust the max-width value as needed */
+  .footer-bottom {
+    font-size: 10px; /* Font size for screens 600px wide or less */
+  }
+}
+.cccontainer{
+  margin:auto;
+
+}
+
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+  padding:0 40px;
+}
+
+.col{
+  width: 25%;
+  text-align: left;
+  padding:0 50px;
+
+}
+
+footer ul{
+  display: block;
+
+}
+ footer a{
+   color:white;
+   font-size: 16px;
+   padding:0;
+   margin:0;
+   line-height: 1.7;
+
+ }
+
+.col ul{
+  padding-bottom:30px;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     page-wedo   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+
+.containerww {
+  background-image: url('/assets/db.JPEG'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px; /* Adjust padding as needed */
+  color: #FFFFFF; /* White text color */
+  height:400px;
+  display: flex; /* Add this line */
+  flex-direction: column; /* Stacks children elements vertically */
+  align-items: center;
+  justify-content: center; /* Optional: to center horizontally as well */
+}
+
+.containerww h1 {
+font-size: clamp(40px, 4vw, 100px); /* Adjusted range for h1 */
+  margin-bottom: 10px; /* Optional: Adds space between h1 and h3 */
+
+}
+
+.containerww h3 {
+  color: #e4f2ff; /* Light gray text color */
+font-size: clamp(20px, 2vw, 40px); /* Adjusted range for h3 */
+}
+.oovvww{
+background:trans;
+display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto new lines */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+gap:30px;
+padding:20px;
+  margin-top:-200px;
+
+}
+.servicesww {
+  background-color: #E5F2FF; /* Light blue background */
+  padding: 50px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.serviceww {
+  background-color: #FFFFFF; /* White background for service boxes */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  text-align: center;
+}
+
+.serviceww img {
+  width: 50px;
+  height: 50px;
+}
+
+.serviceww p {
+  margin: 10px 0 0;
+  color: #000000; /* Black text color */
+}
+
+.serviceww span {
+  color: #A5A5A5; /* Gray text color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  margin-bottom: 0;
+
+
+
+}
+
+
+
+
+.boxee1 {
+    background-color: white;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    height:250px;
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+  margin-bottom: 0;
+  padding-top:40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.services1 p{
+  font-size:20px;
+}
+
+
+
+
+
+.box-imagee1{
+    width:150px;
+  height:100px;
+  background: url('assets/mp.png') center/cover; 
+  transition: background-color 3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: flex;
+  margin-left:44px;
+
+}
+.boxee1:hover .box-imagee1 {
+background: url('assets/mpp.png') center/cover; 
+}
+
+
+
+
+
+
+.box-imagee2{
+  width:150px;
+height:100px;
+  margin-left:42px;
+background: url('assets/mr.png') center/cover; 
+transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.boxee1:hover .box-imagee2 {
+background: url('assets/mrr.png') center/cover; 
+}
+
+
+
+.box-imagee3{
+  width:150px;
+height:100px;
+  margin-left:44px;
+background: url('assets/mw.png') center/cover; 
+transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.boxee1:hover .box-imagee3 {
+background: url('assets/mww.png') center/cover; 
+}
+
+
+
+.box-imagee4{
+  width:150px;
+height:100px;
+  margin-left:44px;
+background: url('assets/mf.png') center/cover; 
+transition: background-color 0.3s ease; 
+}
+
+.boxee1:hover .box-imagee4 {
+background: url('assets/mff.png') center/cover; 
+}
+
+.boxee1 p{
+  font-size:1em;
+  text-align:center;
+  margin-top:20px;
+}
+
+
+.boxee1 {
+width:900px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/*xxxxxxxxxxxxxxxxxxxx wedo page secound section xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+.sectionaaq {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('assets/shoh1.jpg') no-repeat center center/cover;
+  max-height: 200vh; /* Maximum height, beyond which scrolling will occur */
+    overflow: auto; /* Enables vertical scroll if content exceeds max-height */
+}
+
+.containeraaq {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+
+}
+
+.title-container {
+  
+    flex: 1 1 45%;
+padding-top:100px;
+      display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  height:40vh
+}
+@media (max-width:1259px) {
+    .title-container {
+        height: 10vh; /* Adjust height for smaller screens */
+      width:93%;
+    }
+}
+
+
+.title-container h1 {
+    font-size: clamp(4em, 6vw, 8em); /* Responsive font size with increased max limit */
+    color: #d4b473;
+    margin-top: 50px;
+}
+
+.title-container h2 {
+  font-size: clamp(2em, 4vw, 6em); /* Responsive font size with min and max limits */
+  color: #1b2946;
+  margin: 0;
+  padding:0;
+  text-align:center;
+}
+
+.title-container .dots2 {
+    font-size: 100px;
+    color: #1b2946;
+  margin-top:0;
+  padding-top:0;
+  margin-bottom:90px;
+}
+
+
+
+.steps-container {
+   
+    flex: 1 1 45%;
+    margin: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-auto-rows: minmax(auto, auto); /* Automatic row height */
+    gap: 20px; /* Adjust the gap between the boxes as needed */
+
+    /* Media query for smaller screens */
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+.step {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+  border-bottom: 5px solid #283653;
+  margin-right:30px;
+}
+
+.step .icon {
+    font-size: 2em;
+    color: #1b2946;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    font-size: 1.8em;
+    color: #1b2946;
+    margin: 10px 0;
+}
+
+.step p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+.step:hover h3{
+   color: #ceac64;
+}
+
+.ggk{
+  height:70px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+
+
+.cta-container {
+ 
+    flex: 1 1 100%;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cta-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: brightness(50%);
+    border-radius: 8px;
+}
+
+.cta-content {
+    padding: 50px;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cta-content h2 {
+  font-size: clamp(3em, 4vw, 8em); /* Responsive font size with min and max limits */
+  margin: 0 0 20px 0;
+}
+
+.cta-content p {
+    font-size: 1.2em;
+    margin: 0 0 20px 0;
+}
+
+.cta-content button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    background-color: white;
+    color: #28334d;
+    cursor: pointer;
+}
+
+.cta-content button:hover {
+    background-color: #d4b473;
+    color:white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .title-container,
+    .steps-container,
+    .cta-container {
+        flex: 1 1 100%;
+        margin: 20px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+  /*xxxxxxxxxxxxxxxxxxxx connect  page xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+  /*xxxxxxxxxxxxxxxxxxxx connect  page xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+  /*xxxxxxxxxxxxxxxxxxxx connect  page xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */ 
+
+
+
+.topp{
+  background: url('assets/ty.png');
+  background-size:cover;
+  background-position:center;
+  height:300px;
+  position: relative;
+}
+
+
+  .map-background {
+      background-size: cover;
+      padding: 50px 0;
+  }
+
+  .contact-section {
+      background: white;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .contact-section h1 {
+      margin-top: 0;
+      font-size: 2em;
+  }
+
+  .contact-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    padding:50px;
+    margin:50px;
+      margin-bottom: 20px;
+      flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+  }
+
+  .boxmm {
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+    min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: #273753; /* Default text color */
+   
+
+  }
+  
+  .contact-boxes h2{
+    color: white;
+    font-size: clamp(24px, 2vw, 28px);   
+    margin:0px;
+    text-align:center;
+    padding:0px;
+  }
+  
+  .contact-boxes h4{
+    color: #273753;
+    font-size: clamp(24px, 2vw, 28px);
+    margin:0;
+     text-align:center;
+
+  }
+
+  .contact-boxes p {
+    margin: 0;
+    font-size: clamp(16px, 2vw, 26px);   
+     text-align:center;
+  }
+  
+  .boxmm:nth-child(1),
+  .boxmm:nth-child(3) {
+      background: #273753;
+      color: white; /* White text for blue boxes */
+  }
+
+  .boxmm:nth-child(2),
+  .boxmm:nth-child(4) {
+      background: white;
+      color: #273753; /* Blue text for white boxes */
+  }
+
+
+
+  .icon {
+      font-size: 2em;
+  }
+
+  .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+  }
+
+
+
+
+.date-container input {
+  
+    margin-top: 0;
+  
+}
+.contact-form div {
+    display: flex;
+  
+}
+
+.heis {
+    margin-left: 10px;
+    font-size: 12px;
+    color: grey;
+    margin:0;
+    padding:0;
+}
+
+.goba {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left */
+}
+
+.goba span {
+    margin-bottom: 4px; /* Space between the label and input */
+    color:grey;
+    font-family:Arial;
+    font-size:13px;
+}
+
+.heis span {
+    margin-bottom: 2px; /* Space between the label and input */
+ 
+}
+
+.goba input {
+    margin-top: 0; /* Remove top margin if any */
+}
+
+  .contact-form h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+  }
+
+  .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form button {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+
+
+input[type="date"] {
+    display: block; /* Ensure the input is displayed */
+    width: 100%; /* Ensure it takes up space */
+}
+
+
+  .contact-form button {
+      background: #273753;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
+
+  .contact-form button:hover {
+      background: #3e5279;
+  }
+
+  .map-embed {
+      text-align: center;
+      margin: 20px 0;
+  }
+
+  .fyt{
+    height:70px;
+    width:70px;
+    padding-top:20px;
+    padding-bottom:0;
+  }
+
+  .get{
+    font-size: 50px;
+    color:#28334d;
+    text-align: center;
+    padding-top:40px;
+    padding-bottom:0;
+    font-family:Croogla4F ;
+    margin-bottom: 40px;
+  }
+
+  .xfg{
+    color: #CEAB65;
+    font-size:60px;
+  }
+
+  .contact-form h2{
+    margin-top:40px;
+    color:#28334d;
+    font-size:40px;
+    text-align:center;
+  }
+
+
+
+
+
+
+
+
+/* form sumption massage*/
+
+.success-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index:400;
+}
+
+
+
+
+
+
+
+
+
+
+/* logo in hidden page was  very down going out of heder  */
+
+.boms .logo-img{
+    margin-top:0;
+    padding-top:0;
+}

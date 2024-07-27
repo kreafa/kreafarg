@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requestvisning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-zdGtmI4eCm9t0gnJ7pyDHDQHGffn4rxs9wCj2jl3au3Dl0kzwBdNLK7MOKvMPctT4vbrKdyZCETwMuBeZX7oA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-zdGtmI4eCm9t0gnJ7pyDHDQHGffn4rxs9wCj2jl3au3Dl0kzwBdNLK7MOKvMPctT4vbrKdyZCETwMuBeZX7oA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    
+      <meta name="description" content=" the best place for painting " <!-- santance bellow link in search angain apears to peopl  -->
+      <meta name="keywords" content=" painting painter home renovation"> <!-- things user may search about healp the algarethom -->
+      <title>KREAFÄRG</title>   <!-- name of page taht apears on the tap window on top  -->
+
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+      <link href="styles.css" rel="stylesheet" type="text/css" /> <!-- link html to another file in this case css, rel= relationship,href the place here is a local file on left side -->
+      <link rel="icon" type="image/png" href="../assets/faconn.png"> <!-- the relation to  icon that apears next to name on tab window on top -->
+      <!--  <script src="script.js"></script>  to link java script to page ,local file or on internet can be placed above closing of body  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="preload" href="styles.css" as="style">
+      <link rel="preload" href="main.js" as="script">
+
+
+        
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 60px; /* Add space for the footer */
+        }
+
+        .djl{
+            height:100px;
+         
+        }
+        .header {
+            background-color: #273753;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            width: 50px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .menu {
+            font-size: 24px;
+        }
+        .containerj {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .header1 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .header1 h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #273753;
+        }
+        #search-bar {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .job-listing {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid transparent;
+            transition: border 0.3s ease-in-out;
+        }
+        .job-listing:hover {
+            border: 2px solid #28334d;
+        }
+        .submission-date {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 12px;
+            color: grey;
+        
+        }
+
+
+        .checkbox-container {
+            background-color: #90d190;
+            margin-top: 5px;
+            padding:6px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            color:white;
+            height:35px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effect */
+        }
+
+        .checkbox-container:hover {
+            cursor: pointer; /* Pointer cursor on hover */
+            background-color: #54d154; /* Slightly darker background on hover */
+            transform: scale(1.05); /* Slight scale effect on hover */
+        }
+
+        .checkbox-container input {
+            margin-right: 5px;
+            transform: scale(0.8); /* Make checkbox smaller */
+            transition: transform 0.2s ease; /* Smooth transition for checkbox */
+        }
+
+        .checkbox-container input:checked {
+            transform: scale(1.2); /* Enlarge checkbox when checked */
+            transition: transform 0.2s ease; /* Smooth transition for checked state */
+        }
+
+
+
+        /* Control the size of the label */
+        label[for="contact-checkbox"] {
+          
+            margin-top: 5px; /* Add margin if needed */
+        }
+
+
+
+        
+        .job-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .job-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .job-info {
+            flex-grow: 1;
+        }
+        .job-details, .job-message {
+            margin-top: 10px;
+            word-wrap: break-word;
+        }
+        .small-box {
+            background-color: #d0e6f7;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .postcode {
+            background-color: #CEAB65;
+            color:white;
+        }
+        .phone {
+            background-color: #283653;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .phone i {
+            margin-right: 5px;
+        }
+        .footer {
+            background-color: #273753;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .customer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Add space below pagination */
+        }
+        .pagination button {
+            background-color: #273753;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .pagination-info {
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        @media (min-width: 768px) {
+            .header1 {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            #search-bar {
+                margin-top: 0;
+            }
+            .customer-info {
+                flex-direction: row;
+                gap: 20px;
+            }
+          
+        }
+p{
+    font-size:15px;
+    margin:0;
+}
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-side,
+        .middle-side,
+        .right-side {
+            display: flex;
+            align-items: center;
+        }
+
+        .left-side {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .left-side img {
+            margin-right: 10px; /* Space between image and name */
+        }
+
+        .middle-side {
+            flex: 1;
+            justify-content: center;
+        }
+
+        .right-side {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+      
+          .customer-email{
+              margin-left:9px;
+              color:grey;
+          }
+        .small-box {
+            margin-left: 10px; /* Space between postcode and phone */
+        }
+
+        .checkbox-container {
+            margin-left: 10px; /* Space between phone and checkbox */
+        }
+
+        .customer-name {
+            font-size: 24px; /* Adjust size as needed */
+            font-weight: bold; /* Make the text bold */
+            color:#283653;
+        }
+
+        /* Style for the labels and their content */
+        .submission-info p strong,
+        .job-message p strong {
+            color: black; /* Set text color of labels to black */
+        }
+
+        .submission-info p,
+        .job-message p {
+            color: grey; /* Set text color of the submission info and description to grey */
+        }
+
+
+
+
+
+
+
+        .checkbox-container {
+            background-color: #90d190; /* Default background color */
+            margin-top: 5px;
+            padding: 6px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            color: white;
+            height: 35px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effect */
+        }
+
+        .checkbox-container:hover {
+            cursor: pointer; /* Pointer cursor on hover */
+            background-color: #54d154; /* Slightly darker background on hover */
+            transform: scale(1.05); /* Slight scale effect on hover */
+        }
+
+        .checkbox-container input {
+            margin-right: 5px;
+            transform: scale(0.8); /* Make checkbox smaller */
+            transition: transform 0.2s ease; /* Smooth transition for checkbox */
+        }
+
+        .checkbox-container input:checked {
+            transform: scale(1.2); /* Enlarge checkbox when checked */
+            transition: transform 0.2s ease; /* Smooth transition for checked state */
+        }
+
+        .checkbox-container.checked {
+            background-color: red; /* Background color when checked */
+        }
+
+        label[for="contact-checkbox"] {
+            margin-top: 5px; /* Add margin if needed */
+        }
+
+
+
+
+        /* Responsive styles */
+        @media (max-width: 400px) {
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .col {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+
+<section class="boms">
+    <header id="header">
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="../assets/faconn.png" alt="Logo"></a>
+            <div class="logo-text"><a href="index.html">KREAFÄRG</a></div>
+        </div>
+
+        <!-- Navigation menu -->
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="wedo.html">Vad vi gör</a></li>
+
+                <li><a href="index.html#scor">Hur det fungerar</a></li>
+                <li><a href="contact.html">072 605 16 08</a></li>
+            </ul>
+        </nav>
+
+        <!-- Toggle button for small screens -->
+      <!-- Toggle button for small screens -->
+    <div class="toggle-btn">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times" style="display: none;"></i>
+    </div>
+
+
+        <!-- Dropdown menu -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="wedo.html">Vad vi gör</a></li>
+
+                <li><a href="index.html#scor">Hur det fungerar</a></li>
+                <li><a href="contact.html">072 605 16 08</a></li>
+            </ul>
+        </div>
+    </header>
+        </section>
+    <!-- -----------------------------------------------------------------------------------------------  -->
+
+    <section class="djl"> sss</section>
+ 
+
+    <div class="containerj">
+        <div class="header1">
+            <h1 class="header1h1">Inlämnad begäran</h1>
+            <input type="text" id="search-bar" placeholder="Search...">
+        </div>
+        <div id="submissions-container" class="job-listings">
+            <div class="submission-section">
+                <h2 class="section-title">New <span class="line"></span></h2>
+                <div id="new-submissions" class="submissions-list"></div>
+            </div>
+            <div class="submission-section">
+                <h2 class="section-title">Old <span class="line"></span></h2>
+                <div id="old-submissions" class="submissions-list"></div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button id="prev-btn">Previous</button>
+            <div class="pagination-info" id="pagination-info">Page 1 of 1</div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+      <!-- -----------------------------------------------------------------------------------------------  -->
+        <footer>
+        <div class="cccontainer">
+
+
+
+          <div class="row">
+          <div class="col">
+
+            <h3>Snabblänkar </h3>
+             <hr></hr>
+      <ul>
+               <li><a href="index.html"> Hem</a></li>
+               <li><a href="wedo.html"> Vad vi gör</a></li>
+              <li><a href="#">  Projekt</a></li>
+              <li><a href="index.html#scor"> Hur det fungerar</a></li>
+      </ul>
+
+
+                 </div>
+
+
+
+            <div class="col">
+
+              <h3> Tjänster </h3>
+              <hr></hr>
+              <ul>
+              <li><a href="wedo.html"> Måleri</a></li>
+               <li><a href="wedo.html"> Renovering</a></li>
+              <li><a href="wedo.html"> Tapetesring</a></li>
+              <li><a href="wedo.html"> Golv</a></li>
+              </ul>
+          </div>
+
+
+
+          <div class="col">
+
+            <h3>Kontakta oss </h3>
+            <hr></hr>
+            <ul>
+            <li><a href="contact.html"> E-post</a></li>
+             <li><a href="https://www.facebook.com/profile.php?id=61560815730904" target="_blank"> Facebook</a></li>
+            <li><a href="contact.html"> Telephone</a></li>
+
+            </ul>
+          </div>
+
+        </div>
+        </div>
+
+        <div class="footer-bottom"> &copy; 2024 KREAFÄRG. All rights reserved. </div>
+        </footer>
+
+         <!-- -----------------------------------------------------------------------------------------------  -->
+    <script>
+
+    document.getElementById('search-bar').addEventListener('input', function() {
+        let filter = this.value.toLowerCase();
+        let jobListings = document.getElementsByClassName('job-listing');
+
+        Array.from(jobListings).forEach(function(jobListing) {
+            let jobText = jobListing.textContent.toLowerCase();
+            if (jobText.includes(filter)) {
+                jobListing.style.display = '';
+            } else {
+                jobListing.style.display = 'none';
+            }
+        });
+    });
+
+    const password = prompt("Enter the password to view submissions:");
+
+    if (password !== 'My') { // Replace 'my' with your actual password
+        document.body.innerHTML = '<p>Access denied.</p>';
+    } else {
+        document.addEventListener('DOMContentLoaded', function() {
+            const submissionsContainer = document.getElementById('submissions-container');
+            const submissions = JSON.parse(localStorage.getItem('submissions')) || [];
+
+            const renovationImages = {
+                Kök: 'assets/cs5.png',
+                Sovrum: 'assets/cs3.png',
+                Badrum: 'assets/cs2.png',
+                Garage: 'assets/cs1.png',
+                Andra: 'assets/cs4.png'
+            };
+
+            let currentPage = 1;
+            const itemsPerPage = 5;
+            const totalPages = Math.ceil(submissions.length / itemsPerPage);
+
+            function renderPage(page) {
+                submissionsContainer.innerHTML = '';
+                const start = (page - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const paginatedItems = submissions.slice(start, end);
+
+                paginatedItems.forEach(submission => {
+                    const submissionBox = document.createElement('div');
+                    submissionBox.classList.add('job-listing');
+                    const imageSrc = renovationImages[submission.renovation] || 'path/to/default-image.jpg';
+
+                    submissionBox.innerHTML = `
+                        <div class="submission-date">Inlämnad den: ${submission.timestamp}</div>
+                        <div class="job-info">
+                            <div class="job-header">
+                                <div class="left-side">
+                                    <img src="${imageSrc}" alt="Customer Image">
+                                    <div class="customer-info">
+                                        <div class="customer-name">${submission.name}</div>
+                                        <div class="customer-email">${submission.email}</div>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="small-box postcode"><i class="fa-solid fa-location-dot"></i>${submission.postcode}</div>
+                                    <div class="small-box phone"><i class="fa-solid fa-phone"></i>${submission.phone}</div>
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" id="contact-checkbox">
+                                        <label for="contact-checkbox">Read</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-details">
+                            <div class="submission-info">
+                                <p><strong>Datum:</strong> ${submission.date}</p>
+                                <p><strong>Renoveringsval:</strong> ${submission.renovation}${submission.renovation === 'Andra' ? ` (${submission.aadd})` : ''}</p>
+                            </div>
+                            <div class="job-message">
+                                <p><strong>Beskrivning:</strong> ${submission.description}</p>
+                            </div>
+                        </div>
+                    `;
+
+                    submissionsContainer.appendChild(submissionBox);
+                });
+
+                document.getElementById('prev-btn').disabled = page === 1;
+                document.getElementById('next-btn').disabled = page === totalPages;
+                document.getElementById('pagination-info').textContent = `Page ${page} of ${totalPages}`;
+            }
+
+            document.getElementById('prev-btn').addEventListener('click', function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderPage(currentPage);
+                }
+            });
+
+            document.getElementById('next-btn').addEventListener('click', function() {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderPage(currentPage);
+                }
+            });
+
+            renderPage(currentPage);
+        });
+    }
+                                    </script>
+<!-- -----------------------------------------------------------------------------------------------  -->
+<script src="script.js"></script>
+
+</body>
+</html>
