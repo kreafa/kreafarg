@@ -1349,7 +1349,7 @@ footer ul{
 
 
 .containerww {
-  background-image: url('../assets/db.JPEG'); /* Replace with your image path */
+  background-image: url('assets/db.JPEG'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   text-align: center;
