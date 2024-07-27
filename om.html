@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requestvisning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-zdGtmI4eCm9t0gnJ7pyDHDQHGffn4rxs9wCj2jl3au3Dl0kzwBdNLK7MOKvMPctT4vbrKdyZCETwMuBeZX7oA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-zdGtmI4eCm9t0gnJ7pyDHDQHGffn4rxs9wCj2jl3au3Dl0kzwBdNLK7MOKvMPctT4vbrKdyZCETwMuBeZX7oA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+      <meta name="description" content=" the best place for painting " <!-- santance bellow link in search angain apears to peopl  -->
+      <meta name="keywords" content=" painting painter home renovation"> <!-- things user may search about healp the algarethom -->
+      <title>KREAFÄRG</title>   <!-- name of page taht apears on the tap window on top  -->
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+      <link href="styles.css" rel="stylesheet" type="text/css" /> <!-- link html to another file in this case css, rel= relationship,href the place here is a local file on left side -->
+      <link rel="icon" type="image/png" href="../assets/faconn.png"> <!-- the relation to  icon that apears next to name on tab window on top -->
+      <!--  <script src="script.js"></script>  to link java script to page ,local file or on internet can be placed above closing of body  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="preload" href="styles.css" as="style">
+      <link rel="preload" href="main.js" as="script">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .about-us {
+            position: relative;
+            height: 400px;
+            background: url('https://i.ibb.co/vDg2Wtk/CC02-D9-BC-37-E6-4-E81-85-CE-CAADA92-D1-D62.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .about-us h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 20px;
+        }
+        .about-content .text-left {
+            flex: 1;
+            max-width: 50%;
+            padding-right: 20px;
+        }
+        .about-content .text-right {
+            flex: 1;
+            max-width: 50%;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .about-content {
+                flex-direction: column; /* Stack children vertically */
+                align-items: center;
+                justify-content: center
+                gap: 10px; /* Reduced gap between items */
+
+             
+              
+            }
+
+            .text-right {
+                max-width: 100%; /* Full width on small screens */
+                padding: 0; /* Remove side padding on small screens */
+                  text-align: center;
+                 padding-top: 0;
+            }
+
+            .text-left {
+                max-width: 100%; /* Full width on small screens */
+                   padding-top: 40px; /* Remove padding */
+                  text-align: center;
+                padding-bottom: 0;
+                padding:0;
+            }
+
+            .what-we-do h2 {
+                font-size: 1em;
+                margin-bottom: 0px;
+                text-align:center;
+            }
+            
+            
+        }
+        
+        .about-content h2 {
+            color: #273753;
+            font-size: 4em;
+        }
+
+        @media (max-width: 700px) {
+            .about-content h2 {
+                color: #273753;
+                font-size: 3em;
+                padding-bottom:0;
+                margin-bottom:0;
+                text-align:center;
+                padding-left:10px;
+                margin-left:10px;
+            }
+        }
+
+        
+        .yellow-gradient {
+            background: linear-gradient(90deg, #CEAB65, #e6c963);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .about-content p {
+            font-size: 1.1em;
+            margin: 0;
+            color: #555;
+        }
+        .what-we-do {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .what-we-do h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service-box {
+            background-color: #273753;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+
+        .service-box:hover {
+            transform: scale(1.05); /* Slightly increase size */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+        }
+        .service-box h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-box p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        .service-box .learn-more {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .tt {
+            font-size: 4em;
+            font-weight: bold;
+            margin-top: 20px;
+            padding-top: 60px;
+        }
+        @media (max-width: 700px) {
+            
+            .text-right .tt {
+                padding-top: 0; /* Adjust padding for smaller screens */
+            }
+        }
+        
+        .what-we-do h3{
+            color:white;
+            font-size:19px;
+        }
+        .what-we-do h2{
+           margin-top:90px;
+            color:#283653;
+            text-align:center;
+        }
+
+        .what-we-do p{
+            color:white;
+        
+          
+
+        
+            
+    </style>
+</head>
+<body>
+
+<section class="boms">
+    <header id="header">
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="../assets/faconn.png" alt="Logo"></a>
+            <div class="logo-text"><a href="index.html">KREAFÄRG</a></div>
+        </div>
+
+        <!-- Navigation menu -->
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="wedo.html">Vad vi gör</a></li>
+
+                <li><a href="index.html#scor">Hur det fungerar</a></li>
+                 <li><a href="om.html">Om Oss</a></li>
+                <li><a href="contact.html">072 605 16 08</a></li>
+            </ul>
+        </nav>
+
+        <!-- Toggle button for small screens -->
+      <!-- Toggle button for small screens -->
+    <div class="toggle-btn">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times" style="display: none;"></i>
+    </div>
+
+
+        <!-- Dropdown menu -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="wedo.html">Vad vi gör</a></li>
+
+                <li><a href="index.html#scor">Hur det fungerar</a></li>
+                 <li><a href="om.html">Om Oss</a></li>
+                <li><a href="contact.html">072 605 16 08</a></li>
+            </ul>
+        </div>
+    </header>
+
+        </section>
+
+
+    
+    <section class="about-us">
+        <h1>Om Oss</h1>
+    </section>
+     <!------------------------------------------->
+    <body>
+      <div class="container">
+        <div class="title">
+          <h1>Välkommen till</h1>
+          <h1>Kreafärg!</h1>
+        </div>
+        <div class="content">
+          <p>
+            <strong>Vem är Kreafärg?</strong>
+            Din pålitliga partner för målning, tapetsering, spackling, golvrenovering och snickeriarbeten i Skåne. Med flera års erfarenhet är vi engagerade i att leverera högkvalitativa tjänster som förvandlar ditt hem, mot privatpersoner, företag och bostadsrättsföreningar.
+          </p>
+        </div>
+      </div>
+
+
+      <style>
+      
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          max-width: 1200px;
+          padding: 20px;
+          text-align: left;
+
+        }
+        .title {
+          flex: 1  10px;
+
+          text-align: left;
+        }
+        .title h1 {
+          margin: 0;
+          font-size: clamp(2.5rem, 5vw, 4.5rem); /* Responsive font size */
+          color: #283653; /* Dark blue color */
+        }
+
+
+        .title h1:nth-child(2) {
+          color: #D4AF37; /* Gold color */
+        }
+        .content {
+          flex: 1 1 0px;
+          min-width: 300px;
+          text-align: left;
+        }
+        .content p {
+          margin: 0;
+          font-size: 1.2rem;
+          line-height: 1.7;
+          color:grey;
+        }
+        .content p strong {
+          font-size: 1.1rem;
+          color:#1c1c1c;
+        }
+        @media (max-width: 768px) {
+          .container {
+            flex-direction: column;
+            text-align: center;
+            gap: 0px; /* Reduces space between title and content on small screens */
+          }
+          .title h1 {
+
+              text-align: center;
+          }
+          .content p {
+            font-size: 1.1rem;
+          }
+        }
+
+          /* Adjustments for smaller screens */
+          @media (max-width: 568px) {
+              .footer {
+                  flex-direction: column; /* Stack items vertically on small screens */
+                  text-align: center;
+                  gap: 5px; /* Reduces space between title and content on small screens */
+              }
+          }
+
+          
+      </style>
+
+
+
+
+
+    
+       <!------------------------------------------->
+
+    <section class="what-we-do">
+        <h2>Varför välja oss?</h2>
+        <div class="services">
+            <div class="service-box" style="background-color: #273753;">
+                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Mångsidighet och expertis</h3>
+                <p>Vi erbjuder ett omfattande utbud av tjänster inom inredning och renovering, inklusive målning, tapetsering, spackling, golvrenovering och snickeriarbeten.</p>
+                
+            </div>
+            <div class="service-box" style="background-color: #b0a492;">
+                <h3><i class="fa-solid fa-star"></i> Kvalitet och pålitlighet</h3>
+                <p>Vi strävar alltid efter att leverera arbete av högsta kvalitet inom den överenskomna tidsramen och budgeten.</p>
+               
+            </div>
+            <div class="service-box" style="background-color: #CEAB65;">
+                <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Anpassningsbara tjänster</h3>
+
+                <p>Vi erbjuder flexibla lösningar för att möta dina unika behov och önskemål, vilket ger en personlig touch till din renovering.</p>
+             
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer>
+        <div class="cccontainer">
+
+
+
+          <div class="row">
+          <div class="col">
+
+            <h3>Snabblänkar </h3>
+             <hr></hr>
+      <ul>
+               <li><a href="index.html"> Hem</a></li>
+               <li><a href="wedo.html"> Vad vi gör</a></li>
+           <li><a href="om.html">Om Oss</a></li>
+              <li><a href="index.html#scor"> Hur det fungerar</a></li>
+      </ul>
+
+
+                 </div>
+
+
+
+            <div class="col">
+
+              <h3> Tjänster </h3>
+              <hr></hr>
+              <ul>
+              <li><a href="wedo.html"> Måleri</a></li>
+               <li><a href="wedo.html"> Renovering</a></li>
+              <li><a href="wedo.html"> Tapetesring</a></li>
+              <li><a href="wedo.html"> Golv</a></li>
+              </ul>
+          </div>
+
+
+
+          <div class="col">
+
+            <h3>Kontakta oss </h3>
+            <hr></hr>
+            <ul>
+            <li><a href="contact.html"> E-post</a></li>
+             <li><a href="https://www.facebook.com/profile.php?id=61560815730904" target="_blank"> Facebook</a></li>
+            <li><a href="contact.html"> Telephone</a></li>
+                
+
+            </ul>
+          </div>
+
+        </div>
+        </div>
+
+        <div class="footer-bottom"> &copy; 2024 KREAFÄRG. All rights reserved. </div>
+        </footer>
+
+
+
+
+
+
+
+
+    
+  </body>
+    
+  </html>
